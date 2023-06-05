@@ -53,6 +53,7 @@ ul {
 
 .link {
   text-decoration: none;
+  display: block;
 }
 
 .section-list {
@@ -67,6 +68,10 @@ ul {
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*-------------header-------------*/
@@ -78,7 +83,6 @@ ul {
 .header-container {
   display: flex;
   align-items: center;
-  padding: 24px 0;
 }
 
 .header-navigation {
@@ -106,6 +110,10 @@ ul {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+.menu-item {
+  padding: 24px 0;
 }
 
 .menu.link {
