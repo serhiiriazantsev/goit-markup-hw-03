@@ -60,11 +60,19 @@ ul {
   gap: 24px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
 /*-------------header-------------*/
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 0;
   border-bottom: 1px solid var(--accent);
 }
 
@@ -145,7 +153,7 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--white-background-color);
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto;
   padding-bottom: 48px;
 }
@@ -180,7 +188,7 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark);
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .section-two-text {
@@ -215,11 +223,14 @@ ul {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--dark);
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .section-four-item {
   background-color: var(--white-background-color);
+}
+
+.section-four-container {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -252,6 +263,7 @@ ul {
 }
 
 .footer-logo.link {
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -260,6 +272,7 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-brand);
+  margin-bottom: 16px;
 }
 .footer-logo-span {
   color: var(--light);
@@ -270,16 +283,20 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--light);
-  padding-top: 16px;
   max-width: 264px;
 }
 
 /*--------------portfolio-main-section-------------*/
 
+.section.portfolio {
+  padding: 96px 0 120px 0;
+}
+
 .portfolio-button-list {
   display: flex;
   gap: 24px;
   justify-content: center;
+  margin-bottom: 72px;
 }
 
 .portfolio-button {
@@ -293,22 +310,28 @@ ul {
   color: var(--primary-brand);
   cursor: pointer;
   height: 48px;
-  padding: 0 24px;
-  border: none;
+  padding: 12px 24px;
+  border: 1px solid var(--accent);
   border-radius: 4px;
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
   background-color: var(--pressed-state);
   color: var(--white-background-color);
+  border: 1px solid transparent;
 }
 
 .portfolio-card-list {
   display: flex;
-  margin-top: 72px;
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
+}
+
+.portfolio-card-container {
+  padding: 32px 16px;
+  border: 1px solid var(--accent);
+  border-top: none;
 }
 
 .portfolio-subtitle {
@@ -317,10 +340,7 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark);
-  padding-left: 16px;
-  padding-top: 32px;
-  border-left: 1px solid var(--accent);
-  border-right: 1px solid var(--accent);
+  margin-bottom: 8px;
 }
 
 .portfolio-text {
@@ -328,12 +348,6 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text);
-  padding-left: 16px;
-  padding-top: 8px;
-  padding-bottom: 32px;
-  border-left: 1px solid var(--accent);
-  border-right: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
 }
 
 /*--------------header-and-footer-in-index-------------*/
